@@ -40,6 +40,24 @@ app.get('/movies', function(req,res) {
 
 });
 
+app.get('/series', function(req,res) {
+	
+
+		db.collection("series").find().toArray(function(error, results){
+			if (error) throw error;
+
+			console.log(' **** Getting data from collection "series"');
+				
+			res.status(200);
+
+			console.log(' **** Request returned ' + results.length +' elements');
+
+			res.send(JSON.stringify(results));
+		});
+	
+
+});
+
 http.listen(8080, function() {
 	console.log(' ----- Listenning on port 8080 -----');
 })

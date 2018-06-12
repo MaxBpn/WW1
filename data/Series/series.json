@@ -1,0 +1,90 @@
+[
+  {
+      "name": "Casa De Papel - Saison 1",
+      "description" : "Huit voleurs font une prise d'otages dans la Maison royale de la Monnaie d'Espagne, tandis qu'un génie du crime manipule la police pour mettre son plan à exécution.",
+      "year": 2017,
+      "id": "CasaDePapel1",
+      "img": "",
+      "duree": "8 épisodes",
+      "genre" : "Action",
+      "plateformeDiffusion" : "Netflix",
+      "note" : "2"
+  },
+  {
+    "name": "Casa De Papel - Saison 2",
+    "description" : "Huit voleurs font une prise d'otages dans la Maison royale de la Monnaie d'Espagne, tandis qu'un génie du crime manipule la police pour mettre son plan à exécution.",
+    "year": 2018,
+    "id": "CasaDePapel1",
+    "img": "",
+    "duree": "6 épisodes",
+    "genre" : "Action",
+    "plateformeDiffusion" : "Netflix",
+    "note" : "3.5"
+  },
+  {
+      "name": "WestWorld - Saison 1",
+      "description" : "Un parc d'attractions peuplé de robots propose aux visiteurs de se replonger dans plusieurs époques. Lancés dans l'ouest sauvage, deux amis se retrouvent plongés en plein cauchemar quand l'un des androïdes se détraque et les prend en chasse.",
+      "year": 2016 ,
+      "id": "WestWorld1",
+      "img": "",
+      "duree": "15 épisodes",
+      "genre" : "Western",
+      "plateformeDiffusion" : "AMC",
+      "note" : "1"
+  },
+  {
+      "name": "Breaking Bad - Saison 1",
+      "description" : "Walter White est professeur de chimie dans un lycée et vit avec son fils handicapé et sa femme enceinte à Albuquerque, au Nouveau-Mexique. Lorsqu'on lui diagnostique un cancer du poumon en phase terminale, tout s'effondre. Il décide alors de mettre en place un laboratoire de méthamphétamine pour subvenir aux besoins de sa famille en s'associant avec l'un de ses anciens élèves, Jesse Pinkman, devenu petit trafiquant.",
+      "year": 2008,
+      "id": "BreakingBad1",
+      "img": "",
+      "duree": "7 épisodes",
+      "genre" : "Policier",
+      "plateformeDiffusion" : "AMC",
+      "note" : "0"
+  },
+  {
+    "name": "Breaking Bad - Saison 2",
+    "description" : "Tuco Salamanca, le caïd psychopathe, enlève Walter et Jesse car il croit que son bras droit Gonzo l’a trahi (en réalité il a été tué accidentellement). La famille de Walter s’inquiète de sa disparition. Hank part alors à sa recherche et trouve le repaire de Tuco. Alors que Walter et Jesse viennent de s’échapper, Hank abat Tuco.",
+    "year": 2009,
+    "id": "BreakingBad2",
+    "img": "",
+    "duree": "13 épisodes",
+    "genre" : "Policier",
+    "plateformeDiffusion" : "AMC",
+    "note" : "2.5"
+},
+{
+    "name": "Breaking Bad - Saison 3",
+    "description" : "Depuis le crash d'avion, la ville d'Albuquerque est en deuil. Walter, traumatisé depuis qu'il sait qu'il est en partie responsable, refuse néanmoins d'accepter la réalité. Skyler apprend le secret de Walter, demande le divorce, mais promet de garder le secret du travail de Walter pour leurs enfants. Walter ne l'entend pas de cette oreille, refuse de quitter sa femme et tente d'expliquer ses actes. Skyler se jette alors dans une aventure avec Ted, son patron.",
+    "year": 2010,
+    "id": "BreakingBad3",
+    "img": "",
+    "duree": "13 épisodes",
+    "genre" : "Policier",
+    "plateformeDiffusion" : "AMC",
+    "note" : "5"
+},
+{
+    "name": "Breaking Bad - Saison 4",
+    "description" : "Walter essaye de retrouver une certaine stabilité dans sa vie professionnelle, tandis que Jesse va plus mal que jamais, étant proche d'un état dépressif. Mais grâce au deuxième travail qu'il effectue avec Mike, il retrouve alors un peu d'équilibre, et est habilité à protéger Gus lors de son attentat contre le cartel.",
+    "year": 2011,
+    "id": "BreakingBad4",
+    "img": "",
+    "duree": "13 épisodes",
+    "genre" : "Policier",
+    "plateformeDiffusion" : "AMC",
+    "note" : "4"
+},
+{
+    "name": "The End of the F***ing World - Saison 1",
+    "description" : "James, âgé de dix-sept ans et qui vit seul avec son père veuf, se présente comme un psychopathe et tue régulièrement des animaux comme passe-temps. Il se lie avec Alyssa, une camarade de lycée aussi rêveuse que rebelle qui vit avec sa mère et son beau-père.",
+    "year": 2018,
+    "id": "TheEnd1",
+    "img": "",
+    "duree": "8 épisodes",
+    "genre" : "Comédie",
+    "plateformeDiffusion" : "Netflix",
+    "note" : "4"
+}
+]
