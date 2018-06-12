@@ -1,8 +1,8 @@
-if (!window.VueMovies) {
-    window.VueMovies = {};
+if (!window.VueWW) {
+    window.VueWW = {};
 }
 
-window.VueMovies.movieListItem = {
+window.VueWW.movieListItem = {
 	props: [ 'name','year','img','id','description','duree','age','genre','salle','plateformeDiffusion','note'],
     data: function() {
         return {   

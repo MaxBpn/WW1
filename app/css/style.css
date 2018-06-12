@@ -1,0 +1,111 @@
+#searchInput {
+    width: 200px;
+    height: 40px;
+    margin-bottom: 10px;
+}
+.sidebar {
+    margin-bottom: 2rem;
+}
+.movie .serie .year{
+    float: right;
+}
+.movie .serie .name{
+    font-weight: bold;
+    margin-bottom: 1rem;
+}
+.movie .serie .description{
+    margin-bottom: 2rem;
+}
+.container {
+    max-width: 100%;
+}
+.movie, .serie{
+    margin: 10px;
+    padding: 10px;
+    border: solid 1px black;
+    border-radius: 10px;
+    min-height: 150px;
+}
+.el-img {
+    max-height: 100px;
+}
+.el-year {
+    clear:both;
+}
+.detail {
+    margin: 10px;
+    padding: 10px;
+    border: solid 1px black;
+    border-radius: 10px;
+    min-height: 150px;
+}
+.detail .back {
+    width: 50px;
+    height: 50px;
+} 
+.detail .img {
+    float: left;
+    border: 1px solid black;
+    margin-right: 3em;
+    margin-bottom: 2em;
+    background-color: white;
+    padding: 2em;
+    height: 400px;
+    width: 400px;
+}
+.detail ul.specs > li{
+    display: inline-block;
+    width: 200px;
+    vertical-align: top;
+}
+.detail h1 {
+    border-bottom: 1px solid gray;
+}
+.form-check, .form-group, .searchInput{
+    width: 100%;
+    margin-top: 10px;
+    margin-left : 0%;
+    margin-right : 0%;
+}
+.fa-home{
+    font-size: 40px;
+    margin-left: 40px;
+}
+.fa-search{
+    font-size: 20px;
+    margin-right: 10px;
+    color: white
+}
+.fa-user, .fa-power-off{
+    font-size: 40px;
+    margin-left: 10px;
+}
+#filmsPage, #moviesPage, #seriesPage {
+    margin-top: 10px;
+    margin-left: 10px;
+}
+#whichWatcher{
+    color: white;
+    font-size: 25px;
+    font-family: "Courier New", Courier, monospace
+}
+#homeText{
+    font-size: 40px;
+    margin-left: 20%;
+}
+#logo {
+    margin-left: 22%;
+    margin-top: 3%;
+    width :50%;
+}
+#signInText, #signOutText, #signUpText{
+    margin-left: 15px;
+    font-size: 40px;
+    color:black;
+}
+#pasInscritText, #textConfirmationDeconnexion{
+    margin-left: 15px;
+}
+#listBoxText{
+    text-decoration: underline;
+}

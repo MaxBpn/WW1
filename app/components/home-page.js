@@ -1,17 +1,22 @@
-if (!window.VueMovies) {
-    window.VueMovies = {};
+if (!window.VueWW) {
+    window.VueWW = {};
 }
 
-window.VueMovies.homePage = {
+window.VueWW.homePage = {
     data: function() {
         return {   
         };
     },
     computed: {
-	},
+    },
     template:  `
-		<p> Bienvenu </p>
-
-
+        <div>
+            <div> 
+                <b id="homeText"> Bienvenu sur WHICH WATCHER ! </b>
+            </div>
+            <div> 
+                <img id="logo" src="../../img/logo.png">
+            </div>
+        </div>
     `
 };

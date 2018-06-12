@@ -1,8 +1,8 @@
-if (!window.VueMovies) {
-    window.VueMovies = {};
+if (!window.VueWW) {
+    window.VueWW = {};
 }
 
-window.VueMovies.movieList = {
+window.VueWW.movieList = {
     data: function() {
         return {
             filterName: '',

@@ -1,8 +1,8 @@
-if (!window.VueMovies) {
-    window.VueMovies = {};
+if (!window.VueWW) {
+    window.VueWW = {};
 }
 
-window.VueMovies.movieDetail = {
+window.VueWW.movieDetail = {
     data: function() {
 	    return {  
 		    movie: {}, 
