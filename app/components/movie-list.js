@@ -54,7 +54,7 @@ window.VueWW.movieList = {
                   this.movies = response.data;
               });
             }
-              
+               
     },
     created: async function() {
         this.fetchItems();
