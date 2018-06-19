@@ -40,8 +40,43 @@ MongoClient.connect('mongodb+srv://m3bompoi:m3bompoi' +
 
 });
 
+app.post('/favoris', function(req,res) {
+  if (req.body.titre) {
+    var token = req.headers['x-access-token'];
+   
+   var decoded = jwt.verify(token, settings.secret);
+
+   db.collection("users").update({'username':decoded.id}, {$push : {favoris: req.body.titre}});
+
+   res.send({success: true});
+  }
+});
+
+app.get('/favoris', function(req,res) {
+
+   var token = req.headers['x-access-token'];
+   console.log('token recu' +token);
+
+   var decoded = jwt.verify(token, settings.secret);
+   console.log(decoded);
+   console.log(decoded.id);
+
+   db.collection("users").find({'username':decoded.id}).toArray(function(err, result) {
+    if (err) throw err;
+      if (result[0]) {
+          db.collection("movies").find({'name': {$all:result[0].favoris}}).toArray(function (error,results) {
+            if (error) throw error;
+            res.status(200).send(JSON.stringify(results));
+          });
+      }
+   });
+
+});
+
 app.get('/movies', function(req,res) {
-	
+
+    var token = req.headers['x-access-token'];
+   console.log('token recu' +token);
 
 		db.collection("movies").find().toArray(function(error, results){
 			if (error) throw error;
@@ -53,10 +88,8 @@ app.get('/movies', function(req,res) {
 			console.log(' **** Request returned ' + results.length +' elements');
 
 			res.send(JSON.stringify(results));
-		});
-	
 
-});
+}); 
 
 app.get('/series', function(req,res) {
 	
@@ -78,9 +111,8 @@ app.get('/series', function(req,res) {
 
 app.post('/signup', function(req, res) {
 
-	console.log('appel sign up');
-	console.log(req.body.username);
-
+	
+	
   if (!req.body.username || !req.body.password) {
     res.json({success: false, msg: 'Please pass username and password.'});
   } else {
@@ -88,7 +120,7 @@ app.post('/signup', function(req, res) {
 
     	if (results.find(u => u.username == req.body.username)){
     		console.log ('already exists');
-    		return res.json({success: false, msg: 'Username already exists.'});	
+    		return res.send({success: false, msg: 'Username already exists.'});	
     	}
 
     	var newUser = {
@@ -96,11 +128,25 @@ app.post('/signup', function(req, res) {
 			password: req.body.password,
 			firstName: req.body.firstName,
 			lastName: req.body.lastName,
-			email: req.body.email
+			email: req.body.email,
+      favoris: []
     	};
 
-    	db.collection("users").insertOne(newUser);
-    	return res.json({success: true, msg: 'Welcome ' + newUser.firstName + ' ' + newUser.lastName});
+      console.log('Register user :' + req.body.username);
+
+      db.collection("users").insertOne(newUser).then(function(){
+
+        //var token = jwt.sign({id:newUser._id}, settings.secret);
+        res.send({success: true, msg: 'Welcome ' + newUser.firstName + ' ' + newUser.lastName,
+                        /*token: 'JWT ' + token*/});
+        //console.log('token : ' + token);
+      })
+
+      
+      
+
+    	
+    	return ;
     	
     });
     
@@ -133,9 +179,10 @@ app.post('/signin', function(req, res) {
   	} else {
   		//Check password
   		if (req.body.password == result[0].password){
-  			var token = jwt.sign(JSON.stringify(result[0]), settings.secret);
-  			res.json({success: true, token: 'JWT ' + token});
-  			//res.json({success: true, msg:'Welcome back ' + result[0].firstName + ' ' + result[0].lastName});
+  			var token = jwt.sign({id:result[0].username}, settings.secret);
+  			console.log('token back: ' + token);
+  			res.send({success: true, msg:'Welcome back ' + result[0].firstName + ' ' + result[0].lastName,
+                token: token});
   		} else {
   			console.log('wrong');
   			return res.send({success: false, msg: 'Authentication failed. Wrong password.'});
@@ -143,6 +190,19 @@ app.post('/signin', function(req, res) {
   	}
   });
 });
+
+getToken = function (headers) {
+  if (headers && headers.authorization) {
+    var parted = headers.authorization.split(' ');
+    if (parted.length === 2) {
+      return parted[1];
+    } else {
+      return null;
+    }
+  } else {
+    return null;
+  }
+};
 
 http.listen(8080, function() {
 	console.log(' ----- Listenning on port 8080 -----');
