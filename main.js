@@ -75,8 +75,6 @@ app.get('/favoris', function(req,res) {
 
 app.get('/movies', function(req,res) {
 
-    var token = req.headers['x-access-token'];
-   console.log('token recu' +token);
 
 		db.collection("movies").find().toArray(function(error, results){
 			if (error) throw error;
@@ -88,7 +86,11 @@ app.get('/movies', function(req,res) {
 			console.log(' **** Request returned ' + results.length +' elements');
 
 			res.send(JSON.stringify(results));
+   
+  
 
+		});
+	
 }); 
 
 app.get('/series', function(req,res) {
